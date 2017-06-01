@@ -7,6 +7,7 @@
 (function() {
 'use strict';
 //=============================================================================
+
 var people = [];
 var nextId = 1000;
 
@@ -15,7 +16,6 @@ displayPeople( );
 $('#new-person').on( 'click', addNewPerson );
 $('#people').on( 'click', '.edit', editPerson );
 $('#people').on( 'click', '.delete', confirmAndDeletePerson );
-
 
 //=============================================================================
 
@@ -114,7 +114,7 @@ function addOrEditPerson( person ) {
         $('#name').val( '' );
         $('#age').val( '' );
     }
-    $('#submit').one( 'click', createPerson );
+    $('#submit').one( 'click', addOrUpdatePerson );
     $('#cancel').one( 'click', displayPeople );
 
     $('#table-page').hide();
